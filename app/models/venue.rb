@@ -10,8 +10,26 @@ class Venue
     end
 
 
-    
+
     def self.all
         @@all
     end
 end
+
+
+
+
+ALL = []
+
+  attr_accessor :location
+
+  def initialize(location)
+    @location = location
+    ALL << self
+  end
+  def self.all
+    ALL
+  end
+end
+
+

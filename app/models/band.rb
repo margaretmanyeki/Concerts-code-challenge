@@ -13,3 +13,17 @@ class Band
         @@all
     end
 end
+
+class Band
+
+    All = []
+    def initialize(name, genre)
+        @name = name
+        @genre = genre
+        ALL << self
+    end
+
+    def self.all
+        ALL
+      end
+    end
