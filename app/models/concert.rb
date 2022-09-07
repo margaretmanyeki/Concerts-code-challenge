@@ -1,11 +1,23 @@
 class Concert
-    All = []
-    def initialize(date)
+    attr_accessor :date,:band,:Venue
+    @@all = []
+    @@count = 0
+    def initialize(date,band,venue)
         @date = date
-        All << self
-end
-    def self.all
-        All
+        @band = band
+        @venue = venue
+        @@all << self
+        @@count += 1
     end
-end
+    def self.all
+        @all
+    end
+    def self.count
+        @@count
+    end
+    def hometown_show?
+        self.band.hometown==self.venue.city
+    end
+    def introduction 
+        "Hello#{self.venue.city}!!!!"
 

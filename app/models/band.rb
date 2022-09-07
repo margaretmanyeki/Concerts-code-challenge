@@ -7,23 +7,13 @@ class Band
         @name = name
         @hometown = hometown
         @@all << self
+        @Concerts = []
     end
-
+    def hometown
+        @hometown
+    end
     def self.all
         @@all
     end
 end
 
-class Band
-
-    All = []
-    def initialize(name, genre)
-        @name = name
-        @genre = genre
-        ALL << self
-    end
-
-    def self.all
-        ALL
-      end
-    end
