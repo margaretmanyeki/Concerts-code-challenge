@@ -9,6 +9,7 @@ class Venue
         @concerts = []
         @@all << self
     end
+    
     def self.all
         @@all
     end
